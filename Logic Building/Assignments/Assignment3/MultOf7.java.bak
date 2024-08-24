@@ -1,0 +1,10 @@
+public class MultOf7 {
+	public static void main(String args[]){
+		int n =100,result=1,m=7;
+		for(int i=0;i<=n;i++){
+			result = i / m;
+			System.out.println(i);
+		}
+		System.out.println("The numbers which are divide by 7 are: "+result);
+	}
+}
