@@ -1,0 +1,12 @@
+public class IncorrectWhileCondition { 
+	public static void main(String[] args) { 
+	int count = 5; 
+	while (count == 0) { 
+		System.out.println(count); 
+		count--; 
+		} 
+	} 
+}
+/*
+1.Because the system considers it as boolean 
+*/
