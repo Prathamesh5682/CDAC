@@ -1,0 +1,32 @@
+import java.lang.*;
+
+
+class ArmStrong{
+	
+	static boolean isArmStrong(int number){
+		double originalNum = number;
+		double result = 0;
+		double numOfDigits = String.valueOf(number).length();
+		
+		
+		while(number > 0){
+			double digit = number % 10;
+			result = Math.pow(digit, numOfDigits);
+			number = number / 10;
+		}
+		
+		return result == originalNum;
+	}
+	
+	public static void main(String args[]){
+		
+		int n = 153;
+		
+		if(isArmStrong(n)){
+			System.out.println(n+" is a ArmStrong number");
+		}
+		else{
+			System.out.println(n+" is not a ArmStrong number");
+		}
+	}
+}
