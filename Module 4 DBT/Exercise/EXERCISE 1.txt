@@ -1,0 +1,105 @@
+EXERCISE 3 
+1.
+CREATE TABLE SUPPLIER (
+    `S#` CHAR(4),        -- Supplier Number
+    Sname CHAR(20),      -- Supplier Name
+    Status INT,          -- Supplier Status
+    City CHAR(20)        -- Supplier City
+);
+
+
+2.
+CREATE TABLE PARTS (
+    `P#` CHAR(4),        -- Part Number
+    Pname CHAR(20),      -- Part Name
+    Color CHAR(10),      -- Part Color
+    Weight FLOAT,        -- Part Weight
+    City CHAR(20)        -- City where part is supplied
+);
+
+
+3.
+CREATE TABLE PROJECTS (
+    `J#` CHAR(4),        -- Project Number
+    Jname CHAR(20),      -- Project Name
+    City CHAR(20)        -- Project City
+);
+
+4.
+CREATE TABLE SPJ (
+    `S#` CHAR(4),        -- Supplier Number
+    `P#` CHAR(4),        -- Part Number
+    `J#` CHAR(4),        -- Project Number
+    Qty INT              -- Quantity of parts supplied
+);
+
+
+5.
+INSERT INTO SUPPLIER (`S#`, Sname, Status, City)
+VALUES 
+('S1', 'Smith', 20, 'London'),
+('S2', 'Jones', 10, 'Paris'),
+('S3', 'Blake', 30, 'New York');
+
+6.
+INSERT INTO PARTS (`P#`, Pname, Color, Weight, City)
+VALUES 
+('P1', 'Bolt', 'Red', 12.5, 'London'),
+('P2', 'Nut', 'Blue', 8.0, 'Paris'),
+('P3', 'Screw', 'Green', 5.0, 'New York');
+
+7.
+INSERT INTO PROJECTS (`J#`, Jname, City)
+VALUES 
+('J1', 'Alpha', 'London'),
+('J2', 'Beta', 'Paris'),
+('J3', 'Gamma', 'New York');
+
+
+8.
+INSERT INTO SPJ (`S#`, `P#`, `J#`, Qty)
+VALUES 
+('S1', 'P1', 'J1', 100),
+('S2', 'P2', 'J2', 200),
+('S3', 'P3', 'J3', 300),
+('S1', 'P2', 'J3', 150);
+
+
+-------------------------------------------
+Write the SELECT queries to do the following:- 
+ 
+5. Display all the data from the S table.
+-->	select * from supplier;
+
+6.Display only the S# and SNAME fields from the S table.
+-->	 select `S#`, Sname from supplier;
+
+7.Display the PNAME and COLOR from the P table for the CITY=”London”.
+-->	 select pname,color from parts where city = 'london';
+
+8.Display all the Suppliers from London.
+-->	 select * from supplier where city = 'london';
+
+9.Display all the Suppliers from Paris or Athens.
+-->	 select * from supplier where city = 'Paris' or city = 'Athens';
+
+10.Display all the Projects in Athens.
+-->	select * from projects where city = 'Athens';
+
+11.Display all the Partnames with the weight between 12 and 14 (inclusive of both).
+-->	 select * from parts where weight between 12 and 14;
+
+12.. Display all the Suppliers with a Status greater than or equal to 20.
+-->	select * from supplier where status >= 20;
+
+13.Display all the Suppliers except the Suppliers from London.
+-->	 select * from supplier where city != 'london';
+
+14.Display only the Cities from where the Suppliers come from.
+-->	select city from supplier;
+
+15.Assuming that the Part Weight is in GRAMS, display the same in 
+MILLIGRAMS and KILOGRAMS.
+--> select weight,weight*1000 "WT In MilliGrams", weight/1000 "WT In KilloGrams" from parts;
+
+
