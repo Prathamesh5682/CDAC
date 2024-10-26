@@ -1,0 +1,104 @@
+<!DOCTYPE>
+<html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <title>Registration</title>
+    </head>
+    <style>
+        *{
+            font-family: sans-serif;
+        }
+        
+        
+        
+        #container{
+            width: 400px;
+            height: auto;
+            text-align: center;
+            margin: 80px auto;
+            background: rgb(255, 245, 179);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 20px #bf5353;
+        }
+        
+        #heading{
+            font-size: 24px;
+            padding-top: 10px;
+            
+        }
+
+        p{
+            text-align: left;
+            padding-left: 30px;
+            margin-bottom: 5px;
+        }
+        
+        body{
+            background: beige;
+            margin: 0;
+            padding: 0;
+        }
+        
+        input {
+            width: calc(100% - 60px);
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        button{
+            width: calc(100% - 60px);
+            padding: 12px;
+            border: none;
+            background-color: rgb(240, 142, 14);
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background 0.4s;
+        }
+        button:hover{
+            background: darkblue;
+            color: beige;
+        }
+        
+        a{
+            margin-bottom: 10px;
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+
+    <body>
+        <div id="container">
+            <h2 id="heading">First Register Here</h2>
+            <form>
+                <p>FirstName</p>
+                <input type="text" placeholder="Enter First Name">
+                <p>LastName</p>
+                <input type="text" placeholder="Enter Last Name">
+                <p>Email</p>
+                <input type="text" placeholder="Enter Email">
+                <p>Contact Number</p>
+                <input type="number" placeholder="Enter Contact Number">
+                <p>UserName</p>
+                <input type="text" placeholder="Enter Your Username">
+                <p>Password</p>
+                <input type="password" placeholder="Enter Your Password">
+                <button type="submit">Click here to register</button>
+            </form>
+            <p>If you have register already click here to login?<a href="LoginPage.html">Login</a></p>
+        </div>
+    </body>
+</html>

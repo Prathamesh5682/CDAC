@@ -1,0 +1,79 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title> My next Project </title>
+        <style>
+            *{
+                font-family: sans-serif;
+            }
+
+            #container{
+                background-image: url("image.jpg"); /* Path to your image */
+                background-size: cover; /* Cover the container */
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 400px;
+                height: 350px;
+                text-align: center;
+                margin: 80px auto;
+                border-radius: 20px;
+                box-shadow: 0px 10px 20px #bf5353;
+                
+            }
+            #container #p{
+                text-decoration: underline;
+            }
+            #container #heading{
+                padding-top: 10px;
+            }
+            body{
+                background: beige;
+                /* background-image: url("wall.jpg");
+                background-size: cover; */
+            }
+            input{
+                width: 70%;
+                margin-bottom: 10px;
+                padding-left: 10px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                border-radius: 15px;
+                
+            }
+            button{
+                width: 35%;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                background: white;
+                color: #EF5350;
+                border-color:#EF5350;
+                border-width: 1px;
+                border-style: solid;
+                border-radius: 15px;
+                cursor: pointer;
+                transition: background 0.4s;
+            }
+            button:hover{
+                background: #EF5350;
+                color: white;
+            }
+            a{
+                text-decoration: none;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <div id="container">
+            <h2 id="heading">Login</h2>
+            <form>
+                <input type="text" placeholder="Enter Username">
+                <input type="password" placeholder="Enter Password">
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="registration.html">Sign up now</a></p>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE>
+<html>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <head>
+        <title>Car Website</title>
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+    </head>
+    <style>
+        * {
+            font-family: 'Segoe UI Light';
+        }
+        body{
+            margin:0;
+        }
+        nav {
+            background-color: rgb(255, 255, 255);
+            width: 100%;
+            height: 100px;
+            box-shadow: 0px 10px 20px #eeeeee;
+        }
+        #nav-links a {
+            margin-right: 30px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 10px;
+            border-style: solid;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: background 0.4s;
+        }
+
+        #nav-links a:hover{
+            transition: background 0.4s;
+            color: bisque;
+            background-color: red ;
+        }
+
+        #nav-links {
+            position: absolute;
+            left: 250px;
+            top: 50px;
+        }
+        
+        #toyota{
+            margin: 0px;
+            width: 150px;
+            height: 90px;
+            padding-left: 20px;
+            padding-top: 2px;
+        }
+        #urban #u1{
+            width: 100%;
+            padding-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+        #u1:hover{
+            transform: scale(1.2);
+        }
+        #d1{
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-align: center;
+            font-size: 36px;
+        }
+        .highlight{
+            font-family: sans-serif;
+            color: black;
+            font-size: 30px;
+            padding-bottom: 60px;
+        }
+
+        
+        #fortuner{
+            width: 550px;
+            height: 300px;
+            padding-left: 100px;
+        }
+        
+        .footer-links{
+            width: 100%;
+            background-color: rgb(95, 90, 90);
+            margin-top: 20px;
+            padding-top: 20px;
+            height: 150px;
+        }
+        .footer-links, #p1{
+            width: 100%;
+        }
+        
+        .div2{
+            
+            width: 100%;
+            height: 100px;
+            background-color: darkblue;
+        }
+
+        .div2 #innerdiv2_1 a{
+            padding: 20px;
+            font-size: 20px;
+            text-decoration: none;
+            color: beige;
+            font-weight: bolder;
+        }
+
+        
+        #innerdiv2_1{
+            text-align: center;
+            justify-items: center;
+            padding-top: 40px;
+            /* margin-left:calc(100% - 95%); */
+        }
+
+        #innerdiv2_1 a:hover{
+            transition: background 0.4s linear;
+            color: rgb(255, 103, 21);
+        }
+        
+
+        .slides{
+            
+            width: 100%;
+            height: 200px;
+        }
+        
+        /* .slides #dream2{
+            width: 270px;
+            height: inherit;
+            padding-left: 20px;
+            margin: 20px;
+        } */
+        #dream2{
+            margin-bottom: 100px;
+            width: 270px;
+            height: inherit;
+            padding-left: 40px;
+            margin: 20px;
+            margin-bottom: 10%;
+            
+        }
+        .footer {
+            background-color: rgb(90, 90, 83);
+            color: beige;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            width: 100%;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-title {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .footer-logo {
+            width: 300px;
+            height: auto;
+            margin: 10px 0;
+        }
+
+        .footer-links {
+            margin-top: 10px;
+            display: flex;
+            gap: 30px;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: beige;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: rgb(255, 103, 21);
+        }
+
+
+        #dream2 {
+            margin-bottom: 100px;
+            width: 270px;
+            height: inherit;
+            padding-left: 40px;
+            margin: 20px;
+            margin-bottom: 10%;
+            border: black;
+            border-style: 2px;
+            transition: transform 0.3s ease; 
+        }
+        #dream2:hover {
+            transform: scale(1.2); 
+        }
+
+        #scrolling-text {
+            background-color: rgb(132, 6, 6);
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 20px;
+            animation: scroll 15s linear infinite;
+        }
+        
+        @keyframes scroll {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+        
+    </style>
+
+    <body>
+        <nav>
+            <img src="Toyota-Logo.jpg" id="toyota">
+            <div id="nav-links">
+                <a href="#">Products <span style="font-size: 12px;">&#9662;</span></a>
+                <a href="#">Virtual Showroom<span style="font-size: 12px;">&#9662;</span></a>
+                <a href="ContactUs.html">Contact Us</a>
+                <a href="registration.html">Registration</a>
+                <a href="LoginPage.html">Login</a>
+            </div>
+        </nav>
+
+        
+        
+        <div id="d1">
+            <span class="highlight">Discover the toyota range</span>
+        </div>
+
+        <div class="div2">
+            <div id="innerdiv2_1">
+                <a href="#"><i class='fas fa-route'> FIND A DEALER</i></a>
+                <a href="#"><i class='fas fa-car'> TEST DRIVE</i></a>
+                <a href="#"><i class='fa fa-inr'> PRICE LIST<span style="font-size: 12px;">&#9662;</i></span></a>
+                <!-- <a href="#"><i class='fa fa-book'> E-BOOK</i></a> -->
+                <a href="#"><i class='fa fa-book'> BROCHURE</i></a>
+                <a href="#"><i class='fa fa-exchange'> EXCHANGE CAR</i></a>
+            </div>
+            <div>
+
+            </div>
+        </div>
+
+        <div id="urban">
+            <a href="#"><img src="fortuner.jpg" alter="urbancruise" id="u1"></a>
+        </div>
+        <div id="urban">
+            <a href="#"><img src="crysta.png" alter="urbancruise" id="u1"></a>
+        </div>
+
+        <div id="d1">
+            <span class="highlight">More about Toyota</span>
+        </div>
+
+        <div>
+            <div class="slides">
+                <a href="#"><img src="dreambig.jpg" alter="dreambig" id="dream2"></a>
+                <a href="#"><img src="4X4ex.jpg" id="dream2"></a>
+                <a href="#"><img src="know.png" id="dream2"></a>
+                <a href="#"><img src="Cust.png" id="dream2"></a>
+            </div>
+        </div>
+
+        <div id="scrolling-text">Discover the Toyota range and experience excellence.</div>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <h2 class="footer-title"><a href="toyota" style="color: beige; text-decoration: none;">TOYOTA</a></h2>
+                <img src="finance.png" alt="Toyota Finance" class="footer-logo">
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">FAQs</a>
+                </div>
+            </div>
+        </footer>
+        
+    </body>
+</html>
