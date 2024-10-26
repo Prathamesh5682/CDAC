@@ -1,0 +1,94 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title> My next Project </title>
+        <style>
+            *{
+                font-family: sans-serif;
+            }
+
+            #container{
+                background-color: #ff7272;
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 400px;
+                height: 350px;
+                text-align: center;
+                margin: 80px auto;
+                border-radius: 20px;
+                box-shadow: 0px 10px 20px #fff7f7;
+                
+            }
+            #container #p{
+                text-decoration: underline;
+            }
+            #container #heading{
+                padding-top: 10px;
+            }
+            body{
+                background: linear-gradient(rgb(236, 236, 0),pink,purple)
+                /* background-image: url("wall.jpg");
+                background-size: cover; */
+            }
+            input{
+                width: 70%;
+                margin-bottom: 10px;
+                padding-left: 10px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                border-radius: 15px;
+                
+            }
+            button{
+                width: 35%;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                background: white;
+                color: #EF5350;
+                border-color:#EF5350;
+                border-width: 1px;
+                border-style: solid;
+                border-radius: 15px;
+                cursor: pointer;
+                transition: background 0.4s;
+                margin-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            p{
+                font-size: 14px;
+                text-align: left;
+                padding-left: 67px;
+            }
+
+            .container #t1{
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            button:hover{
+                background: #EF5350;
+                color: white;
+            }
+            a{
+                text-decoration: none;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <div id="container">
+            <h2 id="heading">SignUp</h2>
+            <form id="f1">
+                <input type="text" placeholder="Enter Username">
+                <input type="email" placeholder="Enter Email">
+                <input type="password" placeholder="Enter Password">
+                <p>Password Suggestions <a href="#">Click Here</p>
+                <button type="submit" id="t1">Sign Up</button>
+                <button type="submit" id="t1">Sign In</button>
+            </form>
+        </div>
+
+    </body>
+</html>
