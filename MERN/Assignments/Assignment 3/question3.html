@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div>
+        <label for="education">Engineering Branch</label>
+        <select name="education" id="education">
+            <option value="">Select item</option>
+            <option value="CSE" data-icon="fa-solid fa-xmark">CSE <i class="fa-solid fa-xmark"></i></option>
+            <option value="E&TC">E&TC <i class="fa-solid fa-xmark"></i></option>
+            <option value="Civil">Civil <i class="fa-solid fa-xmark"></i></option>
+            <option value="Mechanical">Mechanical <i class="fa-solid fa-xmark"></i></option>
+        </select>
+        <button id="removeButton"> Remove Branch </button>
+    </div>
+
+    <script>
+
+        document.getElementById('removeButton').addEventListener('click', function () {
+            const select = document.getElementById('education');
+            const selectedOption = select.options[select.selectedIndex];
+
+            if (selectedOption) {
+                select.remove(select.selectedIndex);
+            } else {
+                alert("Please select an item to remove.");
+            }
+        });
+
+    </script>
+
+
+</body>
+
+</html>

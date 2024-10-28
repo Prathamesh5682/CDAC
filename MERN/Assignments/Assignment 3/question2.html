@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        *{
+            background: beige;
+            color: navy;
+            font-family: sans-serif;
+            margin: 0px;
+            padding-top: 10px;
+            padding-left: 10px;
+        }
+    
+        #submit{
+            border-radius: 15px;
+            text-align: center;
+            margin: 2px;
+            
+        }
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <form id="form">
+            <label for="firstname">First Name</label>
+            <input type="text" name="firstname" id="firstname">
+            <label for="lastname">Last Name</label>
+            <input type="text" name="lastname" id="lastname">
+            <label for="contact">Contact Number</label>
+            <input type="tel" name="contact" id="contact">
+            <label for="email">Email ID</label>
+            <input type="email" name="email" id="email">
+            <button type="submit" id="submit">Submit</button>   
+        </form>
+        <div id="show"></div>
+    </div>
+
+    <script>
+
+        document.getElementById("form").addEventListener("submit", displayDetails);
+
+        function displayDetails(event) {
+            event.preventDefault();
+            const firstname = document.getElementById("firstname").value;
+            const lastname = document.getElementById("lastname").value;
+            const contact = document.getElementById("contact").value;
+            const email = document.getElementById("email").value;
+
+            const show = document.getElementById("show");
+            show.innerHTML = `
+        <h3>Details:</h3>
+        <p><strong>First Name: </strong> ${firstname}</p>
+        <p><strong>Last Name: </strong> ${lastname}</p>
+        <p><strong>Contact No.: </strong>${contact}</p>
+        <p><strong>Email Id: </strong>${email}</p>
+        `;
+
+        };
+
+    </script>
+
+</body>
+
+</html>
