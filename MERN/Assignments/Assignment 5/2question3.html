@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        //without any speed up the execution means normal execution
+        // const fetchFast = () => {
+
+        //     return new Promise((resolve, reject) => {
+        //         setTimeout(() => {
+        //             resolve("Fast Done");
+        //         }, 2000);
+        //     })
+        // }
+
+        // const fetchSlow = () => {
+
+        //     return new Promise((resolve, reject) => {
+        //         setTimeout(() => {
+        //             resolve("Slow Done");
+        //         }, 6000);
+        //     })
+        // }
+
+        // console.log("Program starting...");
+
+        // const firstTime = new Date();
+
+        // const useData = async () => {
+        //     const fastRes = await fetchFast();
+        //     console.log(fastRes);
+        //     const slowRes = await fetchSlow();
+        //     console.log(slowRes);
+
+        //     const SecondTime = new Date();
+        //     const diff_First_and_Second = SecondTime - firstTime;
+
+        //     console.log("Program Complete", diff_First_and_Second);
+        // }
+
+        // useData();
+        //Total time required to complete the execution is 8 seconds
+
+
+        //To speed up the execution
+        const fetchFast = () => {
+
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve("Fast Done");
+                }, 2000);
+            })
+        }
+
+
+        //probably the 6020 miliseconds are taken to complete the execution after speed up the execution
+        const fetchSlow = () => {
+
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve("Slow Done");
+                }, 6000);
+            })
+        }
+
+        console.log("Program starting...");
+
+        const firstTime = new Date();
+
+        const useData = async () => {
+            const fastRes = fetchFast();
+            console.log(fastRes);
+
+            const slowRes = fetchSlow();
+            console.log(slowRes);
+
+            const result = Promise.all([fastRes, slowRes]);
+            console.log(result);
+
+            const SecondTime = new Date();
+            const diff_First_and_Second = SecondTime - firstTime;
+
+            console.log("Program Complete", diff_First_and_Second);
+        }
+
+        useData();
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
