@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        //step 1 and 2
+        function fetchData(url,callback){
+
+            console.log("Fetching data from "+url);
+            
+            //step 3
+            //waits for 2 seconds and after the 2 seconds anonymous function is executed in settimeout
+            setTimeout(function() {
+                callback(url); //This is equivalent to handleResponse only and as it callback id directly went to the function named as 
+                                    //handleResopnse(response) which is as equivalent to callback(url)
+            }, 2000);
+        }
+
+        //step 4
+        function handleResoponse(response){
+            console.log("Received : ",response);
+        }
+        
+        //step 2    //url as argument       //callback argument as function
+        fetchData("https://www.google.com/",handleResoponse);
+
+    </script>
+
+
+</body>
+
+</html>

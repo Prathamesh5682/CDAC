@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        function fetchData(url, callback) {
+
+            console.log("Fetching data from " + url);
+
+            setTimeout(function () {
+
+                const containsError = 19 < 0.5;
+                if (containsError) {
+                    callback("Network failed" + url, null);
+                }
+                else {
+                    callback(null, url);
+                }
+            }, 2000);
+        }
+
+        function processData(data, callback) {
+            const processedData = data.toUpperCase();
+            console.log("Processing data: ", data);
+            callback(null, processedData);
+        }
+
+        function handleResponse(error, response) {
+            if (error) {
+                console.log("Error:", error);
+            } else {
+                console.log("Received:", response);
+                processData(response, function (err, processedResult) {
+                    if (err) {
+                        console.log("Processing error:", err);
+                    } else {
+                        console.log("Processed result:", processedResult);
+                    }
+                });
+            }
+        }
+
+        fetchData("https://www.google.com", handleResponse);
+
+
+
+    </script>
+
+</body>
+
+</html>
