@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const car = {
+            make: "Toyota",
+            model: "Fortuner",
+            year: "2009",
+            color: "White",
+            mileage: 12000
+        };
+
+        const { make, model, year, color, mileage } = car;
+
+        console.log(make);
+        console.log(model);
+        console.log(year);
+        console.log(color);
+        console.log(mileage);
+
+
+        const { make: carMake, model: carModel, year: carYear } = car;
+
+        console.log(carMake);
+        console.log(carModel);
+        console.log(carYear);
+    </script>
+
+</body>
+
+</html>

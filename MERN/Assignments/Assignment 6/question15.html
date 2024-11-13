@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function processNum(numbers) {
+            return numbers.filter(num => num % 2 === 0)
+                .map(num => num * 2)
+                .reduce((totatl, num) => totatl += num, 0);
+        }
+
+        const numbers = [1, 2, 3, 4, 5, 6];
+        const final = processNum(numbers);
+        console.log("Filter, Map and Reduce using values : ", final);
+
+    </script>
+
+</body>
+
+</html>

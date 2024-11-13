@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShoppingCart</title>
+</head>
+
+<body>
+    <h2>Product catalog</h2>
+    <div id="products">
+        <div class="products">
+            <p>Sugar</p>
+            <button onclick="addToCart('Sugar',10)">Add to Cart</button>
+        </div>
+        <div class="products">
+            <p>Oil</p>
+            <button onclick="addToCart('Oil',20)">Add to Cart</button>
+        </div>
+        <div class="products">
+            <p>Colgate</p>
+            <button onclick="addToCart('Colgate',10)">Add to Cart</button>
+        </div>
+        <div class="products">
+            <p>Soap</p>
+            <button onclick="addToCart('Soap',15)">Add to Cart</button>
+        </div>
+        <div class="products">
+            <p>Hair Oil</p>
+            <button onclick="addToCart('Hair Oil',30)">Add to Cart</button>
+        </div>
+        <div class="products">
+            <p>FaceWash</p>
+            <button onclick="addToCart('FaceWash',25)">Add to Cart</button>
+        </div>
+    </div>
+
+    <h2>Shopping Cart</h2>
+    <div id="cart"></div>
+
+    <script>
+
+        const Tax_rate = 0.08;
+        let totatl_price = 0;
+
+        let cart = [];
+
+        function addToCart(productName, price){
+            console.log(`Adding ${productName} to cart at $${price}`);
+
+            cart.push({name: productName, price:price});
+            updateCartDisplay();
+        }
+
+        function updateCartDisplay(){
+            let cartContainer = document.getElementById("cart");
+            cartContainer.innerHTML = "";
+
+            for(let item of cart){
+                let cartItem = document.createElement("div");
+                cartItem.classList.add("cart-item");
+
+                cartItem.innerHTML = `<p>${item.name} : Rs.${item.price}</p>`;
+                cartContainer.appendChild(cartItem);
+            }
+
+            totatl_price = cart.reduce((total,item) => total + item.price,0);
+
+            const totalTax = totatl_price * (1+Tax_rate);
+
+            let totaldisplay = document.createElement('p');
+            totaldisplay.innerHTML = `<strong>Total (with tax) : ${totalTax.toFixed(2)}</strong>`;
+            cartContainer.appendChild(totaldisplay);
+        }
+    </script>
+
+</body>
+
+</html>

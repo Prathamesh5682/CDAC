@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function areaOfRect(length, width) {
+            return length * width;
+        }
+
+        const areaOfRectArrow = (length, width) => length * width;
+
+        let length = 10;
+        let width = 20;
+
+
+
+        let x = areaOfRect(length, width);
+        console.log("Area of Rectangle using regular function : ", x);
+        let y = areaOfRectArrow(length, width);
+        console.log("Area using arrow function:", y);
+    </script>
+
+</body>
+
+</html>

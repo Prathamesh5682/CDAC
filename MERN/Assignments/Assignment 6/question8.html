@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="path/to/your/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const shoppingCart = [
+            { item: "Soap", price: 10 },
+            { item: "Toothpaste", price: 20 },
+            { item: "Facewash", price: 10 },
+            { item: "Toothbrush", price: 15 }
+        ];
+
+        const totalPriceArrow = shoppingCart.reduce((total, item) => total + item.price, 0);
+        console.log(`Total price using the Arrow function : Rs.${totalPriceArrow.toFixed(2)}`);
+
+        const totalPrice = shoppingCart.reduce(function (total, item) {
+            return total + item.price;
+        }, 0);
+
+        console.log(`Total price using the Regular function : Rs.${totalPrice.toFixed(2)}`);
+    </script>
+
+</body>
+
+</html>
